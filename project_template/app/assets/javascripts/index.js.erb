@@ -1,0 +1,33 @@
+$(document).on('turbolinks:load', function () {
+  $("#owl-demo").owlCarousel({
+    autoPlay: 3000, //Set AutoPlay to 3 seconds
+    autoPlay:true,
+    items : 4,
+    itemsDesktop : [640,5],
+    itemsDesktopSmall : [414,4]
+
+  });
+
+  $("span.menu").click(function(){
+    $(".top-nav ul").slideToggle("slow" , function(){
+    });
+  });
+
+  // You can also use "$(window).load(function() {"
+  $(function () {
+      // Slideshow 4
+    $("#slider4").responsiveSlides({
+      auto: true,
+      pager:true,
+      nav:false,
+      speed: 500,
+      namespace: "callbacks",
+      before: function () {
+        $('.events').append("<li>before event fired.</li>");
+      },
+      after: function () {
+        $('.events').append("<li>after event fired.</li>");
+      }
+    });
+  });
+});

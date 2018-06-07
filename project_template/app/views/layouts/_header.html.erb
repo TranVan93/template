@@ -1,0 +1,14 @@
+<!--header-->
+<div class="header">
+  <div class="logo">
+    <h1><%= link_to "Food Corner", root_path %></h1>
+  </div>
+  <div class="top-nav">
+    <span class="menu"><%= image_tag "menu.png" %></span>
+    <ul>
+      <li><%= link_to "Home", root_path, {class: "active"} %></li>
+      <li><%= link_to "Blog", pages_blog_path %></li>
+    </ul>
+  </div>
+  <div class="clearfix"> </div>
+</div>
